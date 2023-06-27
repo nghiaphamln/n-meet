@@ -3,10 +3,8 @@ const Schema = mongoose.Schema;
 
 
 let userModelSchema = new Schema({
-    google: {
-        id: Number,
-        token: String
-    },
+    googleId: Number,
+    googleToken: String,
     fullName: {
         type: String,
         default: ''

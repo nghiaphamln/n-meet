@@ -4,6 +4,12 @@ class HomeController {
             title: 'Trang chủ'
         });
     }
+
+    static Login(req, res) {
+        res.render('login', {
+            title: 'Đăng nhập'
+        });
+    }
 }
 
 module.exports = HomeController;
