@@ -17,6 +17,12 @@ router
     )
 
     .get(
+        '/join/:roomId',
+        // AuthMiddleware.IsLogin,
+        HomeController.Room
+    )
+
+    .get(
         '/auth/google',
         passport.authenticate('google', {
             scope: [

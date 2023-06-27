@@ -37,8 +37,14 @@ module.exports = (passport) => {
                             newUser.googleId = profile.id;
                             newUser.googleToken = token;
                             newUser.fullName = profile.displayName;
-                            newUser.email = profile.emails[0].value; // pull the first email
+                            newUser.email = profile.emails[0].value;
+                            if (Array.isArray(profile.photos) && profile.photos.length > 0) {
+                                newUser.avatar = profile.photos[0].value;
+                            }
                             newUser.save()
+                                .then(() => {
+                                    return done(null, newUser);
+                                })
                                 .catch(err => {
                                     return done(err);
                                 });

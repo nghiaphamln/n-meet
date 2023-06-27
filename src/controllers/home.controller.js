@@ -10,6 +10,12 @@ class HomeController {
             title: 'Đăng nhập'
         });
     }
+
+    static Room(req, res) {
+        res.render('room', {
+            title: 'Phòng'
+        });
+    }
 }
 
 module.exports = HomeController;
