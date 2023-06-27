@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="/stylesheets/video-grid.css" />
 
 <noscript>Bạn cần bật JavaScript để chạy ứng dụng này.</noscript>
+<input type="hidden" value="<%= user.fullName %>" id="userFullName"/>
+
 
 <div id="loadingDiv" class="center pulsate">
     <h1>Đang tải</h1>
@@ -16,7 +18,7 @@
                 playsinline="true"
                 autoplay=""
                 class="mirror"
-                poster="../images/loader.gif"
+                poster="/images/loader.gif"
                 style="object-fit: var(--videoObjFit)"
         ></video>
         <button id="initVideoButton" class="fas fa-video" onclick="handleVideo(event)"></button>

@@ -13,7 +13,8 @@ class HomeController {
 
     static Room(req, res) {
         res.render('room', {
-            title: 'Phòng'
+            title: 'Phòng',
+            user: req.user
         });
     }
 }
